@@ -1,7 +1,6 @@
-use std::env;
 use std::collections::{BTreeMap, VecDeque};
 use std::error::Error;
-use csv::{Reader, WriterBuilder};
+use csv::WriterBuilder;
 use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Deserialize)]
@@ -94,22 +93,6 @@ impl OrderBook {
     }
     
 }
-
-fn export_matched_orders_to_csv(matched_orders: &[CompletedOrder], output_file: &str) -> Result<(), Box<dyn Error>> {
-    let mut wtr = WriterBuilder::new()
-        .has_headers(false)
-        .from_path(output_file)?;
-
-    wtr.write_record(&["sid", "bid", "size", "price"])?;
-
-    for order in matched_orders {
-        wtr.serialize(order)?;
-    }
-
-    wtr.flush()?;
-    Ok(())
-}
-    
 
 #[cfg(test)]
 mod tests {

@@ -31,6 +31,22 @@
 //     Ok(())
 // }
 
+// fn export_matched_orders_to_csv(matched_orders: &[CompletedOrder], output_file: &str) -> Result<(), Box<dyn Error>> {
+//     let mut wtr = WriterBuilder::new()
+//         .has_headers(false)
+//         .from_path(output_file)?;
+
+//     wtr.write_record(&["sid", "bid", "size", "price"])?;
+
+//     for order in matched_orders {
+//         wtr.serialize(order)?;
+//     }
+
+//     wtr.flush()?;
+//     Ok(())
+// }
+    
+
 fn main() {
     
 }
