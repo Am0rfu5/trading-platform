@@ -1,14 +1,12 @@
 # Crypto Trading Platform
 
-The objective of this project is to build a crypto exchange Trading Platform using Rust.
+The objective of this project is to build a crypto exchange Trading Platform using Rust. It is currently in a very early form with only a straight forward matching engine.
 
 ## Development
 
 ### Prerequisites
 
 - [Rust](https://www.rust-lang.org/tools/install)
-- [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/install/)
 
 ### Setup
 
